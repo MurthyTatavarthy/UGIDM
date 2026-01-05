@@ -1,0 +1,86 @@
+<html>
+<head>
+<title>Gallery</title>
+<style>
+.container
+{
+position:relative;
+max-width:100%;
+margin:auto;
+}
+.slides 
+{
+display: none;
+width: 100%;
+}
+.prev,
+.next 
+{
+cursor: pointer;
+position: absolute;
+top: 50%;
+color: #F84783;
+font-weight: bold;
+font-size: 25px;
+padding: 15px;
+}
+.next
+{
+right:0;
+}
+
+
+</style>
+</head>
+<body>
+<div class="container">
+
+<img src="images\bharat tex\1.jpg" class="slides active">
+    <img src="images\bharat tex\2.jpg" class="slides">
+    <img src="images\bharat tex\3.jpg" class="slides">
+    <img src="images\bharat tex\4.jpg" class="slides">
+    <img src="images\bharat tex\5.jpg" class="slides">
+   <img src="images\bharat tex\6.jpg" class="slides">
+    <img src="images\bharat tex\7.jpg" class="slides">
+    <img src="images\bharat tex\8.jpg" class="slides">
+    <img src="images\bharat tex\9.jpg" class="slides">
+   <img src="images\bharat tex\10.jpg" class="slides">
+</div>
+
+<a class="prev" onclick="changeslide(-1)"><</a>
+  <a class="next" onclick="changeslide(1)">></a>
+
+
+<script>
+//let sindex=0;
+let sindex=1;
+showSlides(sindex);
+
+function changeslide(n) 
+{
+sindex=sindex+n;
+  showSlides(sindex);
+}
+
+
+
+
+function showSlides(n)
+{
+let i;
+let slides=document.getElementsByClassName("slides");
+for(i=0;i<slides.length;i++)
+slides[i].style.display="none";
+//sindex++;
+if(n>slides.length) sindex=1;
+if(n<1) sindex=slides.length;
+//if(sindex>slides.length)sindex=1;
+slides[sindex-1].style.display="block";
+//setTimeout(showSlides,2000);
+
+}
+
+</script>
+
+</body>
+</html>

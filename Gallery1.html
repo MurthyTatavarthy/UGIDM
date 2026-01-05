@@ -1,0 +1,102 @@
+<html>
+<head>
+<title>Image Gallery</title>
+
+<style>
+.container
+{
+position:relative;
+width:100%;
+}
+.slides
+{
+width:100%;
+
+}
+.prev,.next
+{
+cursor:pointer;
+position:absolute;
+top: 50%;
+color: #F84783;
+font-weight: bold;
+font-size: 75px;
+padding: 15px;
+}
+
+.next
+{
+right:0;
+}
+
+
+</style>
+
+</head>
+<body>
+
+<div class="container">
+<img src="images\bharat tex\1.jpg" class="slides">
+<img src="images\bharat tex\2.jpg"  class="slides" >
+<img src="images\bharat tex\3.jpg"  class="slides">
+<img src="images\bharat tex\4.jpg"  class="slides">
+<img src="images\bharat tex\5.jpg"  class="slides">
+</div>
+
+<a class="prev" onclick="changeimage(-1)">  < </a>
+
+<a class="next" onclick="changeimage(1)"> > </a>
+
+
+<script>
+//following for auto scroll
+/*sindex=0;
+showimage();
+*/
+//following for manual change
+sindex=1;
+showimage(sindex);
+
+
+
+function changeimage(a)
+{
+sindex=sindex+a;
+showimage(sindex);
+}
+
+function showimage(b)
+{
+let i;
+let n=document.getElementsByClassName("slides");
+
+for(i=0;i<n.length;i++)
+	n[i].style.display="none";
+
+//enable following lines for autoscroll of images
+
+/*sindex++;
+if(sindex>n.length)
+	sindex=1;
+*/
+//enable following lines for manual navigation of images
+
+if(b>n.length)
+	sindex=1;
+if(b<1)
+	sindex=n.length;
+
+
+n[sindex-1].style.display="block";
+
+//setTimeout(showimage,3000);
+
+}
+
+</script>
+
+
+
+
+</body>
+</html>

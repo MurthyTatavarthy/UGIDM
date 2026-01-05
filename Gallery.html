@@ -1,0 +1,119 @@
+<html>
+<head>
+   <title>Bharat Tex - 2025</title>
+    <style>
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+        }
+
+        .slides {
+            display: none;
+            width: 100%;
+        }
+
+        .active {
+            display: block;
+        }
+
+        .dots {
+            text-align: center;
+            padding: 10px;
+        }
+
+        .dot {
+	   cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+        .active-dot {
+            background-color: #717171;
+        }
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+    </style>
+<script>
+let slideIndex = 0;
+function showSlides() {
+  let i;
+
+  let slides = document.getElementsByClassName("slides");
+let slides = document.getElementsByClassName("capgtions");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active-dot", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active-dot";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+
+
+</script>
+</head>
+<body>
+
+<div class="slideshow-container">
+    <img src="images\bharat tex\1.jpg" class="slides active">
+    <img src="images\bharat tex\2.jpg" class="slides">
+    <img src="images\bharat tex\3.jpg" class="slides">
+    <img src="images\bharat tex\4.jpg" class="slides">
+    <img src="images\bharat tex\5.jpg" class="slides">
+   <img src="images\bharat tex\6.jpg" class="slides">
+    <img src="images\bharat tex\7.jpg" class="slides">
+    <img src="images\bharat tex\8.jpg" class="slides">
+    <img src="images\bharat tex\9.jpg" class="slides">
+   <img src="images\bharat tex\10.jpg" class="slides">
+</div>
+
+
+<div class="dots">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+</div>
+<script>
+showSlides();
+
+</script>
+
+
+</body>
+</html>

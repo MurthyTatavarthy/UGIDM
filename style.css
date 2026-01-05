@@ -1,0 +1,10 @@
+.content {
+  width:100%;
+  overflow:auto;
+}
+.content div {
+  width:50%;
+height:83%;
+  float:left;
+}
+

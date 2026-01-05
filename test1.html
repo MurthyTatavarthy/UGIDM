@@ -1,0 +1,218 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>niftchmoyasic.in – Under Construction</title>
+  <style>
+    :root{
+      --bg:#04050a;
+      --card:#0a0f1a;
+      --accent:#38bdf8;
+      --glow:#0ea5e9;
+      --muted:#9aa4b2;
+      --gradient:linear-gradient(135deg,#38bdf8,#6366f1);
+    }
+    *{box-sizing:border-box;margin:0;padding:0;font-family:'Inter',sans-serif;}
+    body{
+      background:radial-gradient(900px 600px at 20% 10%, rgba(56,189,248,0.18), transparent 60%),
+                 linear-gradient(160deg,#06080e,#0b0f19);
+      color:#e6eef8;
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      padding:30px;
+    }
+    .container{
+      max-width:1100px;
+      width:100%;
+      display:flex;
+      gap:40px;
+      background:rgba(255,255,255,0.03);
+      border-radius:24px;
+      backdrop-filter:blur(14px);
+      border:1px solid rgba(255,255,255,0.08);
+      padding:40px;
+      position:relative;
+      box-shadow:0 0 60px rgba(14,165,233,0.25);
+    }
+    .container::before{
+      content:"";
+      position:absolute;
+      inset:-2px;
+      border-radius:26px;
+      padding:2px;
+      background:var(--gradient);
+      mask:linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      mask-composite:exclude;
+      -webkit-mask-composite:xor;
+      opacity:0.18;
+    }
+    .left{
+      flex:1;
+    }
+    .left img.banner{
+      width:100%;
+      border-radius:18px;
+      margin-bottom:24px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.4);
+    }
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:15px;
+      margin-bottom:20px;
+    }
+    .logo img{
+      width:60px;
+      height:60px;
+      border-radius:12px;
+      object-fit:cover;
+      box-shadow:0 0 15px rgba(56,189,248,0.5);
+    }
+    h1{
+      font-size:38px;
+      font-weight:800;
+      margin-bottom:10px;
+      letter-spacing:-0.02em;
+    }
+    p.lead{
+      color:var(--muted);
+      font-size:18px;
+      margin-bottom:20px;
+      line-height:1.6;
+    }
+    .countdown{
+      display:flex;
+      gap:14px;
+      margin:20px 0;
+    }
+    .count-item{
+      background:rgba(255,255,255,0.06);
+      padding:14px 20px;
+      border-radius:16px;
+      text-align:center;
+      min-width:90px;
+      box-shadow:0 0 20px rgba(56,189,248,0.25);
+    }
+    .count-item strong{
+      font-size:26px;
+    }
+    .count-item small{
+      color:var(--muted);
+    }
+    .actions{
+      margin-top:25px;
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+    }
+    .btn{
+      padding:12px 22px;
+      border-radius:12px;
+      font-size:15px;
+      font-weight:600;
+      cursor:pointer;
+      border:none;
+    }
+    .btn-primary{
+      background:var(--gradient);
+      color:#fff;
+      box-shadow:0 0 20px rgba(56,189,248,0.4);
+    }
+    .btn-ghost{
+      background:transparent;
+      border:1px solid rgba(255,255,255,0.12);
+      color:#dcecff;
+    }
+    .right{
+      width:340px;
+      flex-shrink:0;
+    }
+    .panel{
+      background:rgba(255,255,255,0.05);
+      border-radius:18px;
+      padding:24px;
+      border:1px solid rgba(255,255,255,0.1);
+      box-shadow:0 0 25px rgba(99,102,241,0.25);
+    }
+    .panel h3{
+      margin-bottom:10px;
+      font-size:20px;
+    }
+    .progress{
+      background:rgba(255,255,255,0.08);
+      border-radius:999px;
+      height:10px;
+      overflow:hidden;
+      margin-top:10px;
+    }
+    .progress span{
+      display:block;
+      height:100%;
+      width:70%;
+      background:var(--gradient);
+    }
+    @media(max-width:860px){
+      .container{flex-direction:column;padding:30px;}
+      .right{width:100%;}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="left">
+      <img src="/images/under-construction-banner.jpg" class="banner" alt="Under Construction" />
+
+      <div class="logo">
+        <img src="/images/site-logo.png" alt="Logo" />
+        <div>
+          <div style="color:var(--muted);font-size:14px;font-weight:600;">Welcome to</div>
+          <div style="font-weight:800;font-size:20px;">niftchmoyasic.in</div>
+        </div>
+      </div>
+
+      <h1>We're Building Something Brilliant</h1>
+      <p class="lead">
+        Our website is getting a premium upgrade with advanced features and a brand-new interface.<br>
+        Stay tuned — launching soon.
+      </p>
+
+      <div class="countdown">
+        <div class="count-item"><strong id="d">00</strong><small>Days</small></div>
+        <div class="count-item"><strong id="h">00</strong><small>Hours</small></div>
+        <div class="count-item"><strong id="m">00</strong><small>Mins</small></div>
+        <div class="count-item"><strong id="s">00</strong><small>Secs</small></div>
+      </div>
+
+      <div class="actions">
+        <button class="btn btn-primary">Notify Me</button>
+        <button class="btn btn-ghost">Contact Support</button>
+      </div>
+    </div>
+
+    <div class="right">
+      <div class="panel">
+        <h3>Website Progress</h3>
+        <p style="color:var(--muted);font-size:15px;">We're actively developing core modules.</p>
+        <div class="progress"><span></span></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const launchDate = new Date().getTime() + 12 * 24 * 60 * 60 * 1000;
+    const d=document.getElementById('d'),h=document.getElementById('h'),m=document.getElementById('m'),s=document.getElementById('s');
+    setInterval(()=>{
+      const now=new Date().getTime();
+      const diff=launchDate-now;
+      d.innerHTML=Math.floor(diff/(1000*60*60*24));
+      h.innerHTML=Math.floor((diff%(1000*60*60*24))/(1000*60*60));
+      m.innerHTML=Math.floor((diff%(1000*60*60))/(1000*60));
+      s.innerHTML=Math.floor((diff%(1000*60))/1000);
+    },1000);
+  </script>
+</body>
+</html>
